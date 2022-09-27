@@ -4,21 +4,10 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	/* 양수만 가지는 변수 */ 
-	unsigned int x;
-	int b;
+	int second;
+	printf("input the second : ");
+	scanf("%i", &second);
 	
-	printf("input a number : ");
-	/*ui : unsigned int 형태로 입력받ㅇㅡㅁ*/
-	scanf("%ui", &x);
-	
-	for (b=0; x!=0; x>>=1)
-	{
-		if (x & 1)
-			b = b + 1;
-	}
-	
-	printf("The result is %i\n", b);
-	
+	printf("The time for %i second is %i : %i : %i", second, second / 3600, second % 3600 / 60, second % 3600 % 60);	
 	return 0;
 }
